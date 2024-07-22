@@ -2,8 +2,6 @@
 
 ## Before you start
 
-### Workspace
-
 Create a new directory in a location of your choice with a name like `python_basics`.
 This directory will be your workspace for this homework.
 Open the directory in your text editor (e.g., VS Code).
@@ -18,14 +16,16 @@ When your open editor is a Python file, you should see a Python version in the b
 
 ![Python version](assets/python.png)
 
-All the Python basics you need to know for this homework can be found in the [W3School](https://www.w3schools.com/python/default.asp) Python Tutorial.
+All the Python basics you need to know for this homework can be found in the [W3School](https://www.w3schools.com/python/default.asp) Python Tutorial. You should be able to complete the tasks by reading the "Arrays", "For Loops", "If...Else" and "Functions" sections.
 
 ## Problem 1: Analyzing student scores
+
+> **Warning**: there will be a small "bug" in the provided starter code below. You will need to fix it as you implement the functions.
 
 Copy and paste the following code into a Python file named `student_scores.py`.
 
 ```python
-def average_score(scores: list[int]) -> float:
+def average_score(scores: list[int]) -> int:
     raise NotImplementedError
 
 def max_score(scores: list[int]) -> int:
@@ -57,6 +57,15 @@ if __name__ == "__main__": # This block of code will be executed when you run th
 In each function, replace `raise NotImplementedError` with your implementation of the function.
 
 Notice that in each function definition, there is a type hint for the parameters and the return type. This is a good practice to follow when writing Python code. This will be the required format of all functions in your future homework assignments (and any Python code you write in general!).
+
+Here are the type hints we used in the starter code:
+
+-   `int` means that the return value of the function is an integer.
+-   `list[int]` means that the parameter is a list of integers.
+-   `float` means that the return value of the function is a floating-point number.
+-   `->` is used to indicate the return type of the function.
+
+We will cover type hints in more detail in the future.
 
 ## Problem 2: Analyzing student scores (continued)
 
@@ -121,7 +130,7 @@ def load_scores_from_csv(file_path: str) -> list[int]:
         scores = [int(row["score"]) for row in reader]
         return scores
 
-def average_score(scores: list[int]) -> float:
+def average_score(scores: list[int]) -> int:
     raise NotImplementedError
 
 def max_score(scores: list[int]) -> int:
@@ -149,3 +158,8 @@ if __name__ == "__main__":
     print(f"Median score: {median_score(scores)}")
     print(f"Standard deviation: {standard_deviation(scores)}")
 ```
+
+## Questions
+
+1. How did you implement the `max_score` and `min_score` functions? Can you write it without a loop in only one line of code?
+2. What is wrong with the starter code? Did you encounter any type errors when writing in VS Code?
