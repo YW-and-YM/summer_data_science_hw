@@ -6,4 +6,10 @@ In this lab homework, you will practice writing Python code to analyze student s
 
 You will also practice reading data from a CSV file in Python.
 
-Here's the link to the homework: [Python Basics](/lab1/python_basics.md)
+Here's the link to the homework: [Python Basics](/lab1/README.md)
+
+## Lecture 2
+
+This homework will help you practice the concepts you learned in the second lecture.
+
+Here's the link to the homework: [Python Basics](/lecture2/README.md)
