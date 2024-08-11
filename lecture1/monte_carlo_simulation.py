@@ -67,4 +67,4 @@ while bin_size < 1:
 
 
 # Plot the distribution
-plot_simulated_vs_theoretical(n_trials, n_tosses, p_heads)
+plot_simulated_vs_theoretical(n_trials, n_tosses, p_heads, bin_size)
