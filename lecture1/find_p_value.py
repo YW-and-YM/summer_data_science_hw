@@ -61,43 +61,9 @@ def plot_binomial_with_pvalue(n: int, p: float, observed_heads: int) -> None:
         color="black",
     )
 
-    # Add arrows pointing to the p-value areas
-    if observed_heads <= mean:
-        plt.annotate(
-            "p-value area",
-            xy=(35, 0.00),
-            xytext=(30, 0.03),
-            arrowprops=dict(facecolor="red", shrink=0.05),
-            color="r",
-        )
-
-        plt.annotate(
-            "p-value area",
-            xy=(70, 0.00),
-            xytext=(70, 0.03),
-            arrowprops=dict(facecolor="red", shrink=0.05),
-            color="r",
-        )
-    else:
-        plt.annotate(
-            "p-value area",
-            xy=(35, binomial[int(mean - observed_heads / 2)]),
-            xytext=(30, 0.03),
-            arrowprops=dict(facecolor="red", shrink=0.05),
-            color="r",
-        )
-        plt.annotate(
-            "p-value area",
-            xy=(65, binomial[int((observed_heads + n) / 2)]),
-            xytext=(65, 0.03),
-            arrowprops=dict(facecolor="red", shrink=0.05),
-            color="r",
-        )
-
     # Add horizontal green line for PDF at observed_heads
     pdf_value = binom.pmf(observed_heads, n, p)
     plt.axhline(y=pdf_value, color="g", linestyle="--", linewidth=2)  # type: ignore
-    plt.show()
 
 
 if __name__ == "__main__":
@@ -123,3 +89,4 @@ if __name__ == "__main__":
 
     # Plot the distribution
     plot_binomial_with_pvalue(n, p, observed_heads)
+    plt.show()
