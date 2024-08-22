@@ -1,5 +1,27 @@
 # Summer Data Science Homework
 
+Getting started:
+
+Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/YW-and-YM/summer_data_science_hw.git
+cd summer_data_science_hw
+```
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+Install the required packages:
+
+```bash
+pip install pandas numpy matplotlib scipy ipykernel
+```
+
 ## Lab 1
 
 In this lab homework, you will practice writing Python code to analyze student scores. You will implement functions to calculate the average, maximum, minimum, and number of scores above a threshold, median, and standard deviation of a list of student scores.
